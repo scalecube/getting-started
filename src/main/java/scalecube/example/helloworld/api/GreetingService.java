@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 @Service("greeting")
 public interface GreetingService {
   
-  @ServiceMethod("once")
+  @ServiceMethod("one")
   Mono<String> sayHello(String name);
   
   @ServiceMethod("many")
