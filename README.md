@@ -18,7 +18,7 @@ public interface GreetingService {
 }
 ```
 
-implement the service dsl.
+2. implement the service dsl.
 
 ```java
 public class SimpleGreetingService implements GreetingService {
@@ -41,4 +41,8 @@ public class SimpleGreetingService implements GreetingService {
 }
 ```
 
+3. running the service.
 
+- RequestResponseMain 
+- RequestStreamMain
+- GreetingServiceMain and ServiceGatewayMain

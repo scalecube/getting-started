@@ -1,8 +1,6 @@
 package scalecube.examples.main;
 
 import io.scalecube.services.Microservices;
-import io.scalecube.services.gateway.GatewayConfig;
-import io.scalecube.services.gateway.rsocket.RSocketGateway;
 import scalecube.example.helloworld.SimpleGreetingService;
 import scalecube.example.helloworld.api.GreetingService;
 
