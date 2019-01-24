@@ -46,3 +46,19 @@ public class SimpleGreetingService implements GreetingService {
 - RequestResponseMain 
 - RequestStreamMain
 - GreetingServiceMain and ServiceGatewayMain
+
+4. Api-Sandbox:
+4.1. open in browser: http://scalecube.io/api-sandbox/app/index.html
+
+4.2. click settings and choose Rsocket and set url ws://localhost:9090
+
+![image](https://user-images.githubusercontent.com/1706296/51670553-929d8980-1fcf-11e9-8c25-581381120844.png)
+
+4.3. input json request and click send:
+
+![image](https://user-images.githubusercontent.com/1706296/51670736-f4f68a00-1fcf-11e9-9155-9573d86f069c.png)
+
+
+
+
+
