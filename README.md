@@ -56,6 +56,11 @@ public class SimpleGreetingService implements GreetingService {
 
 4.3. input json request and click send:
 
+select:
+
+![image](https://user-images.githubusercontent.com/1706296/51670893-5dde0200-1fd0-11e9-97f5-da18392f805e.png)
+
+send:
 ![image](https://user-images.githubusercontent.com/1706296/51670736-f4f68a00-1fcf-11e9-9155-9573d86f069c.png)
 
 
