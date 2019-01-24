@@ -6,6 +6,13 @@ import io.scalecube.services.gateway.rsocket.RSocketGateway;
 import scalecube.example.helloworld.SimpleGreetingService;
 
 /**
+ * run ServiceGatewayMain
+ * run GreetingServiceMain
+ * 
+ * 1. Open browser url: http://scalecube.io/api-sandbox/app/index.html
+ * 2. In settings change url to ws://localhost:9090 and connect
+ * 3. Send { "metadata": { "q": "/greeting/once" }, "data": "hello" }
+ * 
  *    ------------       ------------          ------------
  *    -          -       -          -          -          -
  *    - consumer -       - Gateway  -          - service  -
@@ -18,28 +25,16 @@ import scalecube.example.helloworld.SimpleGreetingService;
  */
 public class ServiceGatewayMain {
 
-  private static Microservices setup() {
+  public static void main(String[] args) throws InterruptedException {
 
     Microservices node1 =
         Microservices.builder()
+            .discovery(op->op.port(4800))
             .gateway(GatewayConfig.builder("rsocket", RSocketGateway.class).port(9090).build())
             .startAwait();
 
-    Microservices node2 =
-        Microservices.builder()
-            .discovery(options -> options.seeds(node1.discovery().address()))
-            .services(new SimpleGreetingService())
-            .startAwait();
-
-    return node1;
-  }
-
-  public static void main(String[] args) throws InterruptedException {
-
-    setup();
+    System.out.println(node1.discovery().address()); 
     
-    //1. open browser url: http://scalecube.io/api-sandbox/app/index.html
-    //2. { "metadata": { "q": "/greeting/once" }, "data": "hello" }
     Thread.currentThread().join();
   
   }
