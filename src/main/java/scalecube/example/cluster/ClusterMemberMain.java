@@ -4,14 +4,13 @@ import io.scalecube.cluster.Cluster;
 import io.scalecube.cluster.ClusterConfig;
 import io.scalecube.transport.Address;
 
-/** 
- * Demo 3 cluster members joining.  
- * 
- * for convenience we will alias them with names: (Linus Torvalds, Bill Gates,Steve Jobs).
- * 
- * Linus Torvalds will act as seed and Bill Gates, Steve Jobs will join the cluster.
- * 
- **/
+/**
+ * Demo 3 cluster members joining.
+ *
+ * <p>For convenience we will alias them with names: (Linus Torvalds, Bill Gates,Steve Jobs).
+ *
+ * <p>Linus Torvalds will act as seed. Bill Gates and Steve Jobs will join the cluster as peers.
+ */
 public class ClusterMemberMain {
 
   static Address ofSeed = Address.create("localhost", 4800);
