@@ -4,6 +4,9 @@ import io.scalecube.services.Microservices;
 import io.scalecube.services.transport.api.Address;
 import scalecube.example.helloworld.SimpleGreetingService;
 
+/**
+ * Run this GreetingServiceMain and then run ServiceGatewayMain.
+ */
 public class GreetingServiceMain {
 
   public static void main(String[] args) throws InterruptedException {
