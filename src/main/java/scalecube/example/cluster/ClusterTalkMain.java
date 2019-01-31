@@ -13,6 +13,7 @@ import io.scalecube.transport.Message;
  * <p>Linus Torvalds will act as seed. Bill Gates and Steve Jobs will join the cluster as peers.
  * 
  * <p>Bill sends steve a message.
+ * <p>steve sends bill message
  */
 public class ClusterTalkMain {
 
@@ -25,10 +26,15 @@ public class ClusterTalkMain {
     Cluster steve = joinAsFollower(ofSeed, "Steve Jobs");
     
     steve.listen().subscribe(System.out::println);
-
-    bill.send(steve.address(), Message.builder().sender(steve.address()).data("I am bill").build())
+    bill.listen().subscribe(System.out::println);
+    
+    
+    bill.send(steve.member(), Message.builder().sender(steve.address()).data("I am bill").build())
         .subscribe();
 
+    steve.send(bill.member(), Message.builder().sender(steve.address()).data("I am steve").build())
+    .subscribe();
+    
     Thread.currentThread().join();
   }
 
