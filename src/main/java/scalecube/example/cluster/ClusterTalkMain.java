@@ -20,21 +20,21 @@ public class ClusterTalkMain {
   static Address ofSeed = Address.create("localhost", 4800);
 
   public static void main(String[] args) throws InterruptedException {
- 
+
     joinAsSeed("Linus Torvalds", 4800);
     Cluster bill = joinAsFollower(ofSeed, "Bill Gates");
     Cluster steve = joinAsFollower(ofSeed, "Steve Jobs");
-    
+
     steve.listen().subscribe(System.out::println);
     bill.listen().subscribe(System.out::println);
-    
-    
+
     bill.send(steve.member(), Message.builder().sender(steve.address()).data("I am bill").build())
         .subscribe();
 
-    steve.send(bill.member(), Message.builder().sender(steve.address()).data("I am steve").build())
-    .subscribe();
-    
+    steve
+        .send(bill.member(), Message.builder().sender(steve.address()).data("I am steve").build())
+        .subscribe();
+
     Thread.currentThread().join();
   }
 
