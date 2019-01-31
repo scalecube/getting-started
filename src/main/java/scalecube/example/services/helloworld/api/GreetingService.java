@@ -1,4 +1,4 @@
-package scalecube.example.helloworld.api;
+package scalecube.example.services.helloworld.api;
 import io.scalecube.services.annotations.Service;
 import io.scalecube.services.annotations.ServiceMethod;
 import reactor.core.publisher.Flux;

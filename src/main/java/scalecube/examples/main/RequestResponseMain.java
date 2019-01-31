@@ -1,8 +1,8 @@
 package scalecube.examples.main;
     
 import io.scalecube.services.Microservices;
-import scalecube.example.helloworld.SimpleGreetingService;
-import scalecube.example.helloworld.api.GreetingService;
+import scalecube.example.services.helloworld.SimpleGreetingService;
+import scalecube.example.services.helloworld.api.GreetingService;
 
 /**
  *    ------------                  ------------

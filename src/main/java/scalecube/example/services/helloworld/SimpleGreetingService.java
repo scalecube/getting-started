@@ -1,9 +1,9 @@
-package scalecube.example.helloworld;
+package scalecube.example.services.helloworld;
 
 import java.time.Duration;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import scalecube.example.helloworld.api.GreetingService;
+import scalecube.example.services.helloworld.api.GreetingService;
 
 public class SimpleGreetingService implements GreetingService {
 

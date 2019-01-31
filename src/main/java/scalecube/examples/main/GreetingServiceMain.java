@@ -2,7 +2,7 @@ package scalecube.examples.main;
     
 import io.scalecube.services.Microservices;
 import io.scalecube.services.transport.api.Address;
-import scalecube.example.helloworld.SimpleGreetingService;
+import scalecube.example.services.helloworld.SimpleGreetingService;
 
 /**
  * Run this GreetingServiceMain and then run ServiceGatewayMain.
