@@ -2,6 +2,7 @@ package scalecube.examples.main;
     
 import io.scalecube.services.Microservices;
 import io.scalecube.services.gateway.GatewayConfig;
+import io.scalecube.services.gateway.http.HttpGateway;
 import io.scalecube.services.gateway.rsocket.RSocketGateway;
 
 /**
@@ -29,7 +30,7 @@ public class ServiceGatewayMain {
     Microservices node1 =
         Microservices.builder()
             .discovery(op->op.port(4800))
-            .gateway(GatewayConfig.builder("rsocket", RSocketGateway.class).port(9090).build())
+            .gateway(GatewayConfig.builder("http", HttpGateway.class).port(8080).build())
             .startAwait();
 
     System.out.println(node1.discovery().address()); 

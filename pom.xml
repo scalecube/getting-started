@@ -50,5 +50,12 @@
 			<version>${scalecube.version}</version>
 		</dependency>
 		
+		<!-- RSocket WebSocket https://mvnrepository.com/artifact/io.scalecube/scalecube-services-gateway-rsocket -->
+		<dependency>
+			<groupId>io.scalecube</groupId>
+			<artifactId>scalecube-services-gateway-http</artifactId>
+			<version>${scalecube.version}</version>
+		</dependency>
+	
 	</dependencies>
 </project>
